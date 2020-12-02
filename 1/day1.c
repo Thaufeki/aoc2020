@@ -28,11 +28,16 @@ int main(void) {
     }
 
     int n = sizeof(lineArray)/sizeof(lineArray[0]);
-    int i, j;
+    int i, j, k;
     for (i=0; i < n; i++){
         for (j=0;j < n-i-1;j++){
-            if((lineArray[i]+lineArray[j]) == 2000){
+            if((lineArray[i]+lineArray[j]) == 2020){
                 printf("Numbers are %d and %d, product is %d\n",lineArray[i],lineArray[j],lineArray[i]*lineArray[j]);
+            }
+            for(k = 0; k < n;k++){
+                if((lineArray[i]+lineArray[j]+lineArray[k]) == 2020){
+                    printf("Numbers are %d, %d, and %d, product is %d\n",lineArray[i],lineArray[j],lineArray[k],lineArray[i]*lineArray[j]*lineArray[k]);
+                }
             }
         }
     }
